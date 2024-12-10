@@ -1,0 +1,308 @@
+/* Global styles */
+body {
+    background-color: #e6e5e3;
+    margin: 0;
+    font-family: 'Roboto', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Navigation bar styles */
+nav {
+    background-color: #493a5c;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #d4c3ea;
+    text-decoration: underline;
+}
+
+/* Main content styles */
+main {
+    flex: 1;
+}
+
+/* Header section styles */
+header {
+    display: flex; /* Use flexbox to align items horizontally */
+    justify-content: space-between; /* Space between name and profile image */
+    align-items: center; /* Vertically center the items */
+    padding: 40px 20px;
+    background-color: #695682;
+    color: white;
+    text-align: left; /* Align text to the left */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.3rem;
+    font-style: italic;
+    color: #e0e0e0;
+}
+
+.profile-image {
+    width: 160px; /* Adjust to preferred size */
+    height: 160px; /* Maintain a 1:1 aspect ratio */
+    border-radius: 50%; /* Keeps the circular shape */
+    object-fit: cover; /* Ensures the image fills the container without distortion */
+    margin-left: 20px; /* Adds some space between text and profile image */
+}
+
+
+.home-link {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
+/* Projects Button Styling */
+.project-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: white;
+    color: #493a5c;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, color 0.3s;
+    margin: 10px 0;
+}
+
+.project-button:hover {
+    background-color: #493a5c;
+    color: white;
+}
+
+/* Section styles */
+section {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #493a5c;
+    margin-bottom: 20px;
+}
+
+/* About Me Section Layout */
+.about-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+    max-width: 600px;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    color: #493a5c;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.dwarf-image {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.project-collage {
+    display: flex;
+    justify-content: center; /* Centers images horizontally */
+    gap: 20px; /* Adds space between the images */
+    flex-wrap: wrap; /* Ensures images wrap onto the next line on smaller screens */
+    margin-top: 20px; /* Optional: adds some space above the project collage */
+}
+
+.project-image {
+    width: 200px; /* Adjust the size of the project images */
+    height: 200px;
+    object-fit: cover; /* Default to cover for regular images */
+    border-radius: 8px; /* Optional: adds rounded corners to the images */
+}
+
+/* Define the wiggle animation */
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    75% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+/* Apply the wiggle animation on hover for all project images */
+.project-image:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+/* Long project images */
+.project-image-long {
+    width: 300px; /* Adjust the size of the longer image */
+    height: 200px; /* Keeps the height consistent with the others */
+    object-fit: contain; /* Ensures the full image is displayed without cropping */
+}
+
+/* Apply the wiggle animation on hover for long project images */
+.project-image-long:hover {
+    animation: wiggle 0.5s ease-in-out;
+}
+
+/* Contact info section styles */
+#contact-info {
+    padding: 30px;
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    margin-left: 20px;
+    width: auto;
+    position: relative;
+}
+
+#contact-info h2 {
+    font-size: 1.5rem;
+    color: #493a5c;
+    margin-bottom: 10px;
+}
+
+#contact-info p {
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+#contact-info a {
+    color: #493a5c;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+#contact-info a:hover {
+    color: #7c6c93;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #695682;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .profile-image {
+        width: 120px; /* Adjust to preferred size */
+        height: 120px; /* Maintain a 1:1 aspect ratio */
+        border-radius: 50%; /* Keeps the circular shape */
+        object-fit: cover; /* Ensures the image fills the container without distortion */
+        margin-top: 20px;
+    }
+
+    .project-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .about-me {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-right: 0;
+    }
+
+    .dwarf-image {
+        width: 150px;
+        margin-top: 20px;
+    }
+
+    .project-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .project-image-long {
+        width: 200px; /* Adjust the width for mobile */
+    }
+
+    #contact-info {
+        position: static;
+        margin-left: 0;
+        text-align: center;
+    }
+}

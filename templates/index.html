@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Matzkin's Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="/about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Banner Image (Removed as per request) -->
+        <!-- <div class="banner">
+            <img src="{{ url_for('static', filename='images/banner.jpg') }}" alt="Banner Image">
+        </div> -->
+
+        <header>
+            <h1>Robert Matzkin</h1>
+            <p>So Glad to See You Here!</p>
+            <!-- Profile Image -->
+            <img src="{{ url_for('static', filename='images/profile.jpg') }}" alt="Profile Image" class="profile-image">
+        </header>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Computer science and game design student from Clark University.</p>
+            <p>Based in Worcester, MA</p>
+        </section>
+
+        <section id="projects">
+            <h2>Some of My Projects</h2>
+            <div class="project-collage">
+                <!-- First project with clickable link and custom class for longer image -->
+                <a href="https://birdify.itch.io/dwarfdash" target="_blank">
+                    <img src="static/images/dwarfdash.png" alt="Dwarfdash Project" class="project-image project-image-long">
+                </a>
+                
+                <!-- Second project (no link) -->
+                <img src="static/images/dive.png" alt="Dive Project" class="project-image-long">
+                
+                <!-- Third project with clickable link -->
+                <a href="https://birdify.itch.io/daves-nightmaere" target="_blank">
+                    <img src="static/images/dave.jpg" alt="Dave Project" class="project-image-long">
+                </a>
+            </div>
+        </section>
+        
+        
+    </main>
+
+    <!-- Contact Information Section -->
+    <section id="contact-info">
+        <h2>Contact Information</h2>
+        <p>Email: robertmatzkin1@gmail.com</p>
+        <p>Phone: (857)-999-6207</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/robert-matzkin-979911253" target="_blank">linkedin.com/in/robert-matzkin-979911253</a></p>
+        <p>Resume: <a href="https://docs.google.com/document/d/1kb8CWd3X2mY8BMWbO9nEyP3JLDH4Na30/edit?usp=sharing&ouid=108868479557137954088&rtpof=true&sd=true" target="_blank">View My Resume</a></p>
+    </section>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
